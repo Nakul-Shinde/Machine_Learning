@@ -73,27 +73,6 @@ print("The accuracy percentage of KNN for test dataset:",score_test)
 
 
 
-#----------------------------------------------------------------------
-#Import Gaussian Naive Bayes model
-from sklearn.naive_bayes import GaussianNB
-
-#Create a Gaussian Classifier
-gnb = GaussianNB()
-
-#Train the model using the training sets
-gnb.fit(X_train, y_train)
-
-#Predict the response for test dataset
-
-
-from sklearn.metrics import accuracy_score
-predictions_train = gnb.predict(X_train)
-score_train=accuracy_score(y_train,predictions_train)*100
-predictions_test = gnb.predict(X_test)
-score_test=accuracy_score(y_test,predictions_test)*100
-print("The accuracy percentage of naive_bayes for train dataset:",score_train)
-print("The accuracy percentage of naive_bayes for test dataset:",score_test)
-
 #--------------------------------------------------------------------------
 
 from sklearn.tree import plot_tree
